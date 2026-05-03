@@ -1,0 +1,9 @@
+# nixpacks.toml
+[phases.setup]
+nixPkgs = ["...", "python311Packages.playwright-driver", "python311Packages.playwright"]
+
+[phases.install]
+cmds = ["playwright install chromium"]
+
+[start]
+cmd = "python bot.py"
